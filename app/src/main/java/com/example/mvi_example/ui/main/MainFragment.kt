@@ -1,11 +1,11 @@
-package com.example.mvi_example
+package com.example.mvi_example.ui.main
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.example.mvi_example.R
 import com.example.mvi_example.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
@@ -20,7 +20,8 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<MainFragmentBinding>(inflater, R.layout.main_fragment, container, false)
+        val binding = DataBindingUtil.inflate<MainFragmentBinding>(inflater,
+            R.layout.main_fragment, container, false)
         return binding.root
     }
 
